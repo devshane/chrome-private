@@ -72,10 +72,10 @@ CHROME_NO_3D_ARGS=(--disable-3d-apis --disable-webgl)
 keep=0
 delete=0
 incognito=0
-use_flash=0
-use_referrers=0
-use_gpu=0
-use_3d=0
+use_flash=1
+use_referrers=1
+use_gpu=1
+use_3d=1
 use_proxy=0
 profile=
 profile_name=
@@ -107,10 +107,10 @@ function usage {
   echo -e "  --delete        delete rather than rename profile directory"
   echo -e "                  (ignored with --keep / --profile)"
   echo
-  echo -e "  --flash         enable Flash"
-  echo -e "  --referrers     enable referrers"
-  echo -e "  --gpu           enable gpu acceleration"
-  echo -e "  --3d            enable WebGL / 3D APIs"
+  echo -e "  --no-flash      disable Flash"
+  echo -e "  --no-referrers  disable referrers"
+  echo -e "  --no-gpu        disable gpu acceleration"
+  echo -e "  --no-3d         disable WebGL / 3D APIs"
   echo
   echo -e "  --incognito     start Chrome in incognito mode"
   echo -e "  --root-profile  use given directory as root profile directory"
@@ -189,20 +189,20 @@ while :; do
     --delete)
       delete=1
       ;;
-    --flash)
-      use_flash=1
+    --no-flash)
+      use_flash=0
       ;;
-    --referrers)
-      use_referrers=1
+    --no-referrers)
+      use_referrers=0
       ;;
-    --referers)
-      use_referrers=1
+    --no-referers)
+      use_referrers=0
       ;;
-    --gpu)
-      use_gpu=1
+    --no-gpu)
+      use_gpu=0
       ;;
-    --3d)
-      use_3d=1
+    --no-3d)
+      use_3d=0
       ;;
     --incognito)
       incognito=1

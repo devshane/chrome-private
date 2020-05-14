@@ -1,3 +1,5 @@
+(@floatingatoll) Forked to replace disable-by-default features with disable-when-requested.
+
 [[https://unlicense.org/][https://img.shields.io/badge/license-Unlicense-blue.svg]]
 
 chrome-private.sh is a shell wrapper that simplifies using Google Chrome ephemerally.
@@ -19,10 +21,10 @@ configurations and ways of browsing.
 
 * Features
 
-+ Disables caches, Flash, referrers
++ Disables caches
 
-+ Disables 3D APIs / WebGL, GPU acceleration by default while allowing them to be
-  re-enabled through command-line switches.
++ Allows Flash, referrers, 3D APIs / WebGL, GPU acceleration to be disabled through
+  command-line switches.
 
 + Enables user-specified proxy and incognito mode through command-line switches
 
